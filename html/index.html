@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de cartas PTCG</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
+    <div id="container">
         <aside id="menu">
             <ul id="menu-entry" class="menu-list">
                 <li><a href="#">Buscador</a></li>
@@ -15,13 +20,29 @@
             </ul>
         </aside>
 
-        <div class="field-search-box">
+        <div id="card-filters">
+            <select id="legalities">
+                <option disabled selected>-- Legalidad --</option>
+                <option value="Estándar">Estándar</option>
+                <option value="Expandido">Expandido</option>
+            </select>
+            <select id="supertypes">
+                <option disabled selected>-- Supertipos --</option>
+                <option value="Pokémon">Pokémon</option>
+                <option value="Entrenadores">Entrenadores</option>
+                <option value="Energías">Energías</option>
+            </select>
+        </div>
+
+        <div id="field-search-box">
             <div class="control">
-                <input type="text" id="search-input" class="input" placeholder="Introduce nombre de la carta" autofocus="autofocus">
+                <input type="text" id="search-input" class="input" placeholder="Introduce nombre de la carta"
+                    autofocus="autofocus">
             </div>
             <button id="search-button">Buscar</button>
         </div>
     </div>
     <script src="./scripts/main.js"></script>
 </body>
+
 </html>

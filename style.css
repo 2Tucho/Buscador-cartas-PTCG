@@ -1,0 +1,106 @@
+.molengo-regular {
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    font-family: "Molengo";
+}
+
+body {
+    background-color: hsl(0, 0%, 19%);
+    
+}
+
+p {
+    color: hsl(0, 0%, 96%);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#menu-entry {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    padding-left: 0;
+}
+
+#card-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+select {
+    border-radius: 2px;
+    cursor: pointer;
+  	padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 0.5em;
+  	height: 32px;
+  	outline: 0; 
+  	border: 0;
+	background: hsl(0, 0%, 96%);
+	font-size: 1em;
+	color: hsl(0, 0%, 19%);
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+    padding-left: 0;
+}
+
+#field-search-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#search-input {
+    border: 0;
+    width: 70vw;
+    padding: 13px;
+    border-radius:5px;
+    margin-left: 10px;
+    transition: all 0.25s ease;
+}
+
+#search-button {
+    padding: 8px;
+    padding-right: 50px;
+    width: 10vw;
+    margin-left: 10px;
+    border-radius: 0.25rem 0 1rem 0.3rem;
+    cursor: pointer;
+    font-size: 1em;
+    outline: 0; 
+  	border: 0;
+	background: hsl(0, 0%, 96%);
+    transition: all 0.25s ease;
+}
+
+.menu-list a {
+    border-radius: 2px;
+    color: hsl(0, 0%, 96%);
+    display: block;
+    padding: 0.5em 0.75em;
+}
