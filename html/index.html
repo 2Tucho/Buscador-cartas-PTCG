@@ -21,10 +21,11 @@
         </aside>
 
         <div id="card-filters">
-            <select id="legalities">
-                <option disabled selected>-- Legalidad --</option>
+            <select id="format">
+                <option disabled selected>-- Formato --</option>
                 <option value="Estándar">Estándar</option>
                 <option value="Expandido">Expandido</option>
+                <option value="Unlimited">Unlimited</option>
             </select>
             <select id="supertypes">
                 <option disabled selected>-- Supertipos --</option>
@@ -34,15 +35,12 @@
             </select>
         </div>
 
-        <div id="field-search-box">
-            <div class="control">
-                <input type="text" id="search-input" class="input" placeholder="Introduce nombre de la carta"
-                    autofocus="autofocus">
-            </div>
-            <button id="search-button">Buscar</button>
-        </div>
+        <form id="field-search-box">
+            <input type="search" id="search-input" class="input" placeholder="Introduce nombre de la carta" autofocus="autofocus">
+            <input type="submit" id="search-button" value="Buscar"></input>
+        </form>
     </div>
-    <script src="./scripts/main.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>
