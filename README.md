@@ -14,5 +14,8 @@ https://api.pokemontcg.io/v2/cards?q=
 
 Parece que los grandes filtros toca hacerlos a mano (legalities, supertype)
 
-Buscando directamente por set, sabemos las legalities del mismo. Pero hay cartas reimpresas de otros sets anteriores que pueden haberse quedado fuera de estándar, por ejemplo. En la propia carta viene el set y todos esos datos así que no hay problema por esa parte. El problema es que recientemente ha salido una nueva expansión de cartas que ha hecho que todas las cartas con legalidad "E" hayan quedado fuera del formato de estándar, y esta información todavía no ha sido actualizada en las cartas. 
- - ¿Cómo lo arreglo? El filtro lo hago por card.regulationMark y excluyo la "E". En plan que si le clickan a estándar que en la query busque cartas que tienen la regulationMark "F", "G" o "H"
+EventListener que al clicar en el botón de "Buscar" me haga una petición a la api con el nombre de la carta que hay escrito en el input
+
+Hacer funcionalidad en la que, dependiendo de lo escogido en el selector, ponga una cosa u otra en la petición a la API: si no lo has escogido que no añada nada, si lo has hecho dependiendo de cual que busque con ese filtro
+
+Ya está hecha la función que permite hacer el fecth. Accede sin problemas. Ahora tocaría dibujar en el DOM con lo que me traigo del fetch
