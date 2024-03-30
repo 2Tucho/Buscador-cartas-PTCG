@@ -31,3 +31,9 @@ Y así al clicar
 
 Pero con la información detallada de esta forma:
 ![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/f7dc4402-606c-4d1f-9ceb-c6a6635ed8b3)
+
+Ahora en la práctica, la búsqueda de cartas ha quedado de la siguiente manera:
+![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/4f1d51e4-b6bb-4d8e-89b4-b0702a81abc3)
+He añadido un botón de "Ampliar" con el que próximamente aparecerá la Modal Box que contendrá la imagen de la carta y los datos
+
+He metido un nuevo .then() donde el fecth que contendrá la función que creará el modal. Con un buclé haré que tocando el botón "Ampliar" se abra el modal que corresponde al elemento en posición [i] con los datos de la carta en esa misma posición en los resultados

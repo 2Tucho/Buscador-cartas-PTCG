@@ -2,7 +2,7 @@
     font-family: "Molengo", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 * {
     font-family: "Molengo";
@@ -10,7 +10,7 @@
 
 body {
     background-color: hsl(0, 0%, 19%);
-    
+
 }
 
 p {
@@ -42,16 +42,16 @@ p {
 select {
     border-radius: 2px;
     cursor: pointer;
-  	padding-right: 10px;
+    padding-right: 10px;
     padding-left: 10px;
     margin-left: 0.5em;
-  	height: 32px;
-  	outline: 0; 
-  	border: 0;
-	background: hsl(0, 0%, 96%);
-	font-size: 1em;
-	color: hsl(0, 0%, 19%);
-	border:2px solid rgba(0,0,0,0.2);
+    height: 32px;
+    outline: 0;
+    border: 0;
+    background: hsl(0, 0%, 96%);
+    font-size: 1em;
+    color: hsl(0, 0%, 19%);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     position: relative;
     transition: all 0.25s ease;
@@ -80,7 +80,7 @@ a {
     border: 0;
     width: 70vw;
     padding: 13px;
-    border-radius:5px;
+    border-radius: 5px;
     margin-left: 10px;
     transition: all 0.25s ease;
 }
@@ -93,9 +93,9 @@ a {
     border-radius: 0.25rem 0 1rem 0.3rem;
     cursor: pointer;
     font-size: 1em;
-    outline: 0; 
-  	border: 0;
-	background: hsl(0, 0%, 96%);
+    outline: 0;
+    border: 0;
+    background: hsl(0, 0%, 96%);
     transition: all 0.25s ease;
 }
 
@@ -112,7 +112,68 @@ a {
     justify-content: center;
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card-image {
     margin: 20px 15px;
     height: 300px;
+}
+
+/*Botón del Modal*/
+#card-click {
+    cursor: pointer;
+    padding: 0;
+    border: 1;
+    width: 40%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    /* Por defecto, estará oculto */
+    position: fixed;
+    /* Posición fija */
+    z-index: 1;
+    /* Se situará por encima de otros elementos de la página*/
+    padding-top: 200px;
+    /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Algura completa */
+    overflow: auto;
+    /* Se activará el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color negro con opacidad del 50% */
+}
+
+.contenido-modal {
+    position: relative;
+    /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto;
+    /* Centrada */
+    padding: 20px;
+    width: 60%;
+}
+
+#close-modal {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
