@@ -1,4 +1,5 @@
 function printSearchResults(search) {
+    document.querySelector("#search-results").innerHTML = ""
     for (let i = 0; i < search.data.length; i++) {
         let card = `<img src=${search.data[i].images.small} class="card-image" />`
         document.querySelector("#search-results").innerHTML += card
