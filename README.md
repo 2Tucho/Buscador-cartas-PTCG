@@ -19,3 +19,15 @@ EventListener que al clicar en el botón de "Buscar" me haga una petición a la 
 Hacer funcionalidad en la que, dependiendo de lo escogido en el selector, ponga una cosa u otra en la petición a la API: si no lo has escogido que no añada nada, si lo has hecho dependiendo de cual que busque con ese filtro
 
 Ya está hecha la función que permite hacer el fecth. Accede sin problemas. Ahora tocaría dibujar en el DOM con lo que me traigo del fetch
+
+Se deberían pintar todas las cartas resultantes de aplicar los filtros de búsqueda en columnas y por la foto de la carta (.data[i].images.small). Al pulsar a la foto que se quiera debería salir en grande con un modal add y toda la información relevante colocada
+
+Así al buscar
+![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/655a8196-8fed-4b44-b9a8-07e09f29482c)
+Crear un bucle for que por cada busqueda.data[i] cree un <img> cuyo atributo src sea la url que hay en busqueda.data[i].images.small. Tendrá una clase determinada con la que todas tendrán las mismas dimensiones
+
+Y así al clicar
+![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/4fed6e2d-ded9-4ac6-9bde-19bbc3a48bbf)
+
+Pero con la información detallada de esta forma:
+![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/f7dc4402-606c-4d1f-9ceb-c6a6635ed8b3)

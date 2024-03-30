@@ -73,6 +73,7 @@ a {
 #field-search-box {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 #search-input {
@@ -103,4 +104,15 @@ a {
     color: hsl(0, 0%, 96%);
     display: block;
     padding: 0.5em 0.75em;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-image {
+    margin: 20px 15px;
+    height: 300px;
 }
