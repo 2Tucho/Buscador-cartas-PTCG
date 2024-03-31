@@ -36,4 +36,8 @@ Ahora en la práctica, la búsqueda de cartas ha quedado de la siguiente manera:
 ![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/4f1d51e4-b6bb-4d8e-89b4-b0702a81abc3)
 He añadido un botón de "Ampliar" con el que próximamente aparecerá la Modal Box que contendrá la imagen de la carta y los datos
 
-He metido un nuevo .then() donde el fecth que contendrá la función que creará el modal. Con un buclé haré que tocando el botón "Ampliar" se abra el modal que corresponde al elemento en posición [i] con los datos de la carta en esa misma posición en los resultados
+También he creado una zona para la Modal Box en el documento HTML, cuyo contenido variará según la carta de la queramos ver la información. Ahora se crea la Modal Box efectivamente:
+![image](https://github.com/2Tucho/Buscador-cartas-PTCG/assets/105043263/21afbece-7544-48c3-8b86-db03eb564d95)
+
+He asociado el id de cada botón con el id de la información que le corresponde mostrar. Ahora al clicar el botón de "Ampliar" sabe con qué información rellenar la Modal Box.
+Para ello, estoy creando la plantilla con los elementos que se crearán en el Modal Box en coleccion.html fijándome en la página: https://pokemontcg.guru/card/metagross-v-sword-and-shield/swsh6-181
