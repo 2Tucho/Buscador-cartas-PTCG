@@ -30,6 +30,13 @@ p {
     padding-left: 0;
 }
 
+#menu-entry a {
+    border-radius: 2px;
+    color: hsl(0, 0%, 96%);
+    display: block;
+    padding: 0.5em 0.75em;
+}
+
 #card-filters {
     display: flex;
     flex-wrap: wrap;
@@ -99,12 +106,7 @@ a {
     transition: all 0.25s ease;
 }
 
-.menu-list a {
-    border-radius: 2px;
-    color: hsl(0, 0%, 96%);
-    display: block;
-    padding: 0.5em 0.75em;
-}
+
 
 #search-results {
     display: flex;
@@ -154,7 +156,7 @@ a {
     /* Color negro con opacidad del 50% */
 }
 
-.contenido-modal {
+.modal-content {
     position: relative;
     /* Relativo con respecto al contenedor -modal- */
     background-color: white;

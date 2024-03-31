@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de cartas PTCG</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="../assets/icono-pokeball.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 <body>
     <div id="container">
         <aside id="menu">
-            <ul id="menu-entry" class="menu-list">
+            <ul id="menu-entry">
                 <li><a href="#">Buscador</a></li>
                 <li><a href="/html/coleccion.html">Colección</a></li>
             </ul>
@@ -41,8 +42,16 @@
         </form>
     </div>
     
-    <section id="search-results">
+    <div id="modal-box" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2>Ventana modal</h2>
+            <p>Esto es el texto de la ventana</p>
+        </div>
+    </div>
 
+    <section id="search-results">
+        
     </section>
     
     <script src="../scripts/main.js"></script>
