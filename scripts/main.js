@@ -258,6 +258,9 @@
 
 } */
 
+//Creo variable vacía con mis resultados del fetch
+let searchResults = {}
+
 function printSearchResults(search) {
     document.querySelector("#search-results").innerHTML = "";
     let arrayList = []
@@ -268,48 +271,19 @@ function printSearchResults(search) {
                     </section>`;
         document.querySelector("#search-results").innerHTML += card
         arrayList.push(search.data[i].id)
-        console.log(search.data[i].id)
-
     }
     console.log(arrayList)
     arrayList.map(id => {
         document.getElementById(`${id}`).addEventListener("click", function (event) {
-            var modal = document.getElementById("modal-box");
+            let modal = document.getElementById("modal-box");
             modal.style.display = "block";
+            let cardToPrint = searchResults.data.filter(elem => elem.id == id)
+            console.log(cardToPrint);
+            //Llamada a la función que pinta la tarjeta en el Modal con argumento = cardToPrint
         })
     })
 
 };
-
-/* function displayModalBox() {
-    let data = `<div id="modal-box" class="modal">
-                <div class="modal-content">
-                    <span id="close-modal">&times;</span>
-                    <h2>Ventana modal</h2>
-                    <p>Esto es el texto de la ventana</p>
-                </div>
-            </div>`
-    document.getElementById("search-results").innerHTML += data
-
-    // Ventana modal
-    var modal = document.getElementById("modal-box");
-
-    // Hace referencia al elemento <span> que tiene la X que cierra la ventana
-    var span = document.getElementById("close-modal");
-
-    // Si el usuario hace click en la x, la ventana se cierra
-    span.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Si el usuario hace click fuera de la ventana, se cierra.
-    window.addEventListener("click", function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    });
-} */
-//printSearchResults(search)
 
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -350,46 +324,21 @@ document.querySelector("form").addEventListener("submit", function (event) {
     fetch(`https://api.pokemontcg.io/v2/cards?q=name:"${cardName}" ${filterSupertypes} ${filterFormat}&orderBy=-set.releaseDate`)
         .then(res => res.json())
         .catch((error) => console.error("Error:", error))
-        .then(search => printSearchResults(search))
-        .then()
-
+        .then(search => {
+            searchResults = search;
+            printSearchResults(searchResults)
+        })
 });
 
-/* for (let i = 0; i < search.length; i++) {
-    document.querySelector("open-modal-button")[i].addEventListener("click", function () {
-        modal.style.display = "block";
-    })
-    let data = `<div id="modal-box" class="modal">
-                    <div class="modal-content">
-                        <span id="close-modal">&times;</span>
-                        <h2>Ventana modal</h2>
-                        <p>Esto es el texto de la ventana</p>
-                    </div>
-                </div>`
-    document.getElementById("search-results").innerHTML += data
 
-    modal.style.display = "block";
-
-    // Si el usuario hace click en la x, la ventana se cierra
-    span.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Si el usuario hace click fuera de la ventana, se cierra.
-    window.addEventListener("click", function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    })
-}; */
 
 
 // Ventana modal
-var modal = document.getElementById("modal-box");
+let modal = document.getElementById("modal-box");
 console.log(modal)
 
 // Hace referencia al elemento <span> que tiene la X que cierra la ventana
-var span = document.getElementById("close-modal");
+let span = document.getElementById("close-modal");
 console.log(span);
 
 // Si el usuario hace click en la x, la ventana se cierra
@@ -405,3 +354,35 @@ window.addEventListener("click", function (event) {
         console.log("Hey funciono")
     }
 });
+
+
+
+/* function displayModalBox() {
+    let data = `<div id="modal-box" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal">&times;</span>
+                    <h2>Ventana modal</h2>
+                    <p>Esto es el texto de la ventana</p>
+                </div>
+            </div>`
+    document.getElementById("search-results").innerHTML += data
+
+    // Ventana modal
+    let modal = document.getElementById("modal-box");
+
+    // Hace referencia al elemento <span> que tiene la X que cierra la ventana
+    let span = document.getElementById("close-modal");
+
+    // Si el usuario hace click en la x, la ventana se cierra
+    span.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Si el usuario hace click fuera de la ventana, se cierra.
+    window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+} */
+//printSearchResults(search)
