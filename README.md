@@ -41,3 +41,7 @@ También he creado una zona para la Modal Box en el documento HTML, cuyo conteni
 
 He asociado el id de cada botón con el id de la información que le corresponde mostrar. Ahora al clicar el botón de "Ampliar" sabe con qué información rellenar la Modal Box.
 Para ello, estoy creando la plantilla con los elementos que se crearán en el Modal Box en coleccion.html fijándome en la página: https://pokemontcg.guru/card/metagross-v-sword-and-shield/swsh6-181
+
+**QUEDA MIRAR**
+1. Si hay muchos resultados necesito un botón o algo que me cargue las diferentes páginas donde estén (porque cada págine solo permite un máximo de 250 cartas)
+2. Hacerme unos cuantos if con los distintos tipos de cartas: pokemon con un solo ataque, pokemon con 3 (Sceptile EX), pokemon con habilidad, entrenadores o energías

@@ -156,7 +156,7 @@ a {
     /* Color negro con opacidad del 50% */
 }
 
-.modal-content {
+#modal-content {
     position: relative;
     /* Relativo con respecto al contenedor -modal- */
     background-color: white;

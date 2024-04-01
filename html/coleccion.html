@@ -26,7 +26,7 @@
             <span id="close-modal">&times;</span>
             <div id="modal-data-content">
                 <section id="modal-inner-image">
-                    <img src="" alt="">
+                    <img src="images.large" alt="name">
                 </section>
                     <article id="card-basic-info">  
                         <article>
@@ -41,6 +41,8 @@
                         <p>attacks[0].text</p>
                         <p>attacks[1].cost attacks[1].name attacks[1].damage</p>
                         <p>attacks[1].text</p>
+                        <p>attacks[2].cost attacks[2].name attacks[2].damage</p>
+                        <p>attacks[2].text</p>
                     </article>
                     <article id="card-rules-info">
                         <p>rules</p>
@@ -49,9 +51,11 @@
                         <section class="card-bottom-info">
                             <h6>WEAKNESS</h6>
                             <p>weaknesses.type weaknesses.value</p>
-                        </section class="card-bottom-info">
+                        </section>
+                        <section class="card-bottom-info">
                             <h6>RESISTANCES</h6>
                             <p>resistances.type resistances.value</p>
+                        </section>
                         <section class="card-bottom-info">
                             <h6>RETREAT COST</h6>
                             <p>retreatCost</p>
@@ -78,7 +82,18 @@
                         </section>
                     </article>
                     <article id="card-regulations-info">
-
+                        <section id="card-regulations-standard">
+                            <button>Standard</button>
+                            <button>legalities.standard</button>
+                        </section>
+                        <section id="card-regulations-expanded">
+                            <button>Expanded</button>
+                            <button>legalities.expanded</button>
+                        </section>
+                        <section id="card-regulations-unlimited">
+                            <button>Unlimited</button>
+                            <button>legalities.unlimited</button>
+                        </section>
                     </article>
 
                 <section id="modal-inner-data">
