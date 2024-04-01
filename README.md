@@ -45,3 +45,5 @@ Para ello, estoy creando la plantilla con los elementos que se crearán en el Mo
 **QUEDA MIRAR**
 1. Si hay muchos resultados necesito un botón o algo que me cargue las diferentes páginas donde estén (porque cada págine solo permite un máximo de 250 cartas)
 2. Hacerme unos cuantos if con los distintos tipos de cartas: pokemon con un solo ataque, pokemon con 3 (Sceptile EX), pokemon con habilidad, entrenadores o energías
+3. Hacer funciones como la de los ataques para las resistencias, debilidades y otras cosas que los resultados de alguna carta no tengan y me den como undefined
+4. Arreglar que al abrir una carta nueva el Modal se abre en la posición en que lo hayas dejado en la anterior

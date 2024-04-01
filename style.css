@@ -148,8 +148,8 @@ a {
     top: 0;
     width: 100%;
     /* Ancho completo */
-    height: 100%;
-    /* Algura completa */
+    height: 1000px;
+    /* Altura completa */
     overflow: auto;
     /* Se activará el scroll si es necesario */
     background-color: rgba(0, 0, 0, 0.5);
