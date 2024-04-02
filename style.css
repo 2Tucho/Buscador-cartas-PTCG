@@ -10,14 +10,14 @@
 
 body {
     background-color: hsl(0, 0%, 19%);
-
+    position: absolute;
 }
 
-p {
-    color: hsl(0, 0%, 96%);
-    font-size: 2rem;
-    text-align: center;
+#estoy-en-ello {
+    font-size: 40px;
     margin-top: 100px;
+    text-align: center;
+    color: hsl(0, 0%, 96%);
 }
 
 #menu-entry {
@@ -112,6 +112,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .card-container {
@@ -135,10 +136,10 @@ a {
     border-radius: 5px;
 }
 
-.modal {
+#modal-box {
     display: none;
     /* Por defecto, estará oculto */
-    position: fixed;
+    position: absolute;
     /* Posición fija */
     z-index: 1;
     /* Se situará por encima de otros elementos de la página*/
@@ -146,11 +147,12 @@ a {
     /* El contenido estará situado a 200px de la parte superior */
     left: 0;
     top: 0;
+    
     width: 100%;
     /* Ancho completo */
-    height: 1000px;
+    height: 100%;
     /* Altura completa */
-    overflow: auto;
+    /* overflow: auto; */
     /* Se activará el scroll si es necesario */
     background-color: rgba(0, 0, 0, 0.5);
     /* Color negro con opacidad del 50% */
@@ -159,11 +161,12 @@ a {
 #modal-content {
     position: relative;
     /* Relativo con respecto al contenedor -modal- */
-    background-color: white;
+    background: white/* rgba(0,0,0,0.5) */;
     margin: auto;
     /* Centrada */
     padding: 20px;
-    width: 60%;
+    width: 50%;
+    color: black;
 }
 
 #close-modal {
@@ -178,4 +181,52 @@ a {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+#modal-inner-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#modal-inner-image>img {
+    height: 400px;
+}
+
+.pokemon-type-image {
+    height: 15px;
+}
+
+#card-basic-info {
+    margin-top: 15px;
+}
+#card-basic-info, #card-basic-info>article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-data-content>p {
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+#weak-res-reat-raw {
+    margin: 40px 10px;
+}
+
+
+
+/* Toda la info de la carta */
+p {
+    font-size: 1rem;
+    color: black;
+    margin: 5px;
+}
+
+#weak-res-reat-raw {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+#weak-res-reat-raw>section {
+    width: 33%;
 }
