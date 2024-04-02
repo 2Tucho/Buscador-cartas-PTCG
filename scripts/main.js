@@ -26,11 +26,188 @@ function printSearchResults(search) {
 };
 
 function printCardData(data) {
-    //atk = data[0].attacks[1]; atk = data[0].attacks[2]
-    function attacksCost(atk) {
-        if(atk == undefined) {
+    //Comprobar si hay o no habilidad --> data[0].abilities[0]
+    function hasAbilityType(abi) {
+        if(abi == undefined) {
             return ""
-        } else return atk.cost
+        } else return abi[0].type
+    }
+    function hasAbilityName(abi) {
+        if(abi == undefined) {
+            return ""
+        } else return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/ability-3a07d6b5dd74f26907cdb84381784e2a81e24e33442be9de262a1f29a1dfa785.png"></img>' + ' ' + abi[0].name
+    }
+    function hasAbilityText(abi) {
+        if(abi == undefined) {
+            return ""
+        } else return abi[0].text
+    }
+
+    //atk = data[0].attacks[0]; data[0].attacks[1]; atk = data[0].attacks[2]
+    function attacksCost(atk) {
+        let cost
+        if(atk == undefined) return ""
+        switch (atk.cost[0]) {
+            case "Colorless":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">';
+                break;
+            case "Darkness":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
+                break;
+            case "Fighting":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">';
+                break;
+            case "Fire":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fire-76e636965a1e28800904de4abbf84ade3b019bbbce7021987f379971f881c2b5.png">';
+                break;
+            case "Grass":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/grass-ec3509d75db6cd146139044107045ccb5bcbb528b02c3de89d709a7be4a0bf90.png">';
+                break;
+            case "Lightning":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/lightning-732a70ef2e2dab4cc564fbf4d85cad48b0ac9ece462be3d42166a6fea4085773.png">';
+                break;
+            case "Metal":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/metal-076b10c3700a68913c376f841b46a1d63c3895247385b4360bc70739289179b7.png">';
+                break;
+            case "Psyquic":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/psychic-503107a3ed9d9cce58e290677918f057ea6dc4e75042f2a627a5dd8a8bf6af9e.png">';
+                break;
+            case "Water":
+                cost = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">';
+                break;
+            default:
+                console.log("break")
+                break;
+        }
+        switch (atk.cost[1]) {
+            case "Colorless":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">';
+                break;
+            case "Darkness":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
+                break;
+            case "Fighting":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">';
+                break;
+            case "Fire":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fire-76e636965a1e28800904de4abbf84ade3b019bbbce7021987f379971f881c2b5.png">';
+                break;
+            case "Grass":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/grass-ec3509d75db6cd146139044107045ccb5bcbb528b02c3de89d709a7be4a0bf90.png">';
+                break;
+            case "Lightning":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/lightning-732a70ef2e2dab4cc564fbf4d85cad48b0ac9ece462be3d42166a6fea4085773.png">';
+                break;
+            case "Metal":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/metal-076b10c3700a68913c376f841b46a1d63c3895247385b4360bc70739289179b7.png">';
+                break;
+            case "Psyquic":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/psychic-503107a3ed9d9cce58e290677918f057ea6dc4e75042f2a627a5dd8a8bf6af9e.png">';
+                break;
+            case "Water":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">';
+                break;
+            default:
+                console.log("break")
+                break;
+        }
+        switch (atk.cost[2]) {
+            case "Colorless":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">';
+                break;
+            case "Darkness":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
+                break;
+            case "Fighting":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">';
+                break;
+            case "Fire":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fire-76e636965a1e28800904de4abbf84ade3b019bbbce7021987f379971f881c2b5.png">';
+                break;
+            case "Grass":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/grass-ec3509d75db6cd146139044107045ccb5bcbb528b02c3de89d709a7be4a0bf90.png">';
+                break;
+            case "Lightning":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/lightning-732a70ef2e2dab4cc564fbf4d85cad48b0ac9ece462be3d42166a6fea4085773.png">';
+                break;
+            case "Metal":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/metal-076b10c3700a68913c376f841b46a1d63c3895247385b4360bc70739289179b7.png">';
+                break;
+            case "Psyquic":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/psychic-503107a3ed9d9cce58e290677918f057ea6dc4e75042f2a627a5dd8a8bf6af9e.png">';
+                break;
+            case "Water":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">';
+                break;
+            default:
+                console.log("break")
+                break;
+        }
+        switch (atk.cost[3]) {
+            case "Colorless":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">';
+                break;
+            case "Darkness":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
+                break;
+            case "Fighting":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">';
+                break;
+            case "Fire":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fire-76e636965a1e28800904de4abbf84ade3b019bbbce7021987f379971f881c2b5.png">';
+                break;
+            case "Grass":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/grass-ec3509d75db6cd146139044107045ccb5bcbb528b02c3de89d709a7be4a0bf90.png">';
+                break;
+            case "Lightning":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/lightning-732a70ef2e2dab4cc564fbf4d85cad48b0ac9ece462be3d42166a6fea4085773.png">';
+                break;
+            case "Metal":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/metal-076b10c3700a68913c376f841b46a1d63c3895247385b4360bc70739289179b7.png">';
+                break;
+            case "Psyquic":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/psychic-503107a3ed9d9cce58e290677918f057ea6dc4e75042f2a627a5dd8a8bf6af9e.png">';
+                break;
+            case "Water":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">';
+                break;
+            default:
+                console.log("break")
+                break;
+        }
+        switch (atk.cost[4]) {
+            case "Colorless":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">';
+                break;
+            case "Darkness":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
+                break;
+            case "Fighting":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">';
+                break;
+            case "Fire":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fire-76e636965a1e28800904de4abbf84ade3b019bbbce7021987f379971f881c2b5.png">';
+                break;
+            case "Grass":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/grass-ec3509d75db6cd146139044107045ccb5bcbb528b02c3de89d709a7be4a0bf90.png">';
+                break;
+            case "Lightning":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/lightning-732a70ef2e2dab4cc564fbf4d85cad48b0ac9ece462be3d42166a6fea4085773.png">';
+                break;
+            case "Metal":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/metal-076b10c3700a68913c376f841b46a1d63c3895247385b4360bc70739289179b7.png">';
+                break;
+            case "Psyquic":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/psychic-503107a3ed9d9cce58e290677918f057ea6dc4e75042f2a627a5dd8a8bf6af9e.png">';
+                break;
+            case "Water":
+                cost += '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">';
+                break;
+            default:
+                console.log("break")
+                break;
+        }
+        return cost
     }
     function attackName(atk) {
         if(atk == undefined) {
@@ -57,11 +234,14 @@ function printCardData(data) {
 
     // weak = data[0].weaknesses
     function weaknessType(weak) {
-        if(weak[0].type == "Colorless") {
+        if(weak == undefined) {
+            return ""
+        } else if(weak[0].type == "Colorless") {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">'
         } else if (weak[0].type == "Darkness") {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
-        } else if (weak[0].type == "Dragon") {return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/dragon-3445aa07cd2c2380ae8e61f4ec47c7d678b4ab4268db16f95f66a04ecdd5200f.png">'
+        } else if (weak[0].type == "Dragon") {
+            return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/dragon-3445aa07cd2c2380ae8e61f4ec47c7d678b4ab4268db16f95f66a04ecdd5200f.png">'
         } else if (weak[0].type == "Fighting") {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/fighting-5fcb6e1f157032efac4f6830d88759e83e66530354a297b112fff24c152e8d3c.png">'
         } else if (weak[0].type == "Fire") {
@@ -86,7 +266,9 @@ function printCardData(data) {
 
     // res = data[0].resistances
     function resistanceType(res) {
-        if(res[0].type == "Colorless") {
+        if(res == undefined) {
+            return ""
+        } else if(res[0].type == "Colorless") {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">'
         } else if (res[0].type == "Darkness") {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/darkness-d766bdc83589235f104c3c3892cff4de80048e7a729f24b6e5e53a1838c7ebfa.png">'
@@ -115,6 +297,7 @@ function printCardData(data) {
 
     // Retreat Cost
     function retreatCost(rc) {
+        if(rc == undefined) return ""
         let newArr = rc.map(elem => elem = '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/colorless-fd5125f53e603b89cdfc6984ab4cea8e3ed43323a8d84bee6a774db1ea8c3dae.png">')
         return newArr.toString().replaceAll(',', ' ')
     }
@@ -143,7 +326,8 @@ function printCardData(data) {
             return '<img class="pokemon-type-image" src="https://pokemontcg.guru/assets/water-6b0bc3ea40b358d372e8be04aa90be9fb74e3e46ced6824f6b264cc2a7c7e32a.png">'
         } else ""
     }
-    
+    /* console.log("El coste del primer ataque: " + data[0].attacks[0].cost[0]) */
+    /* console.log("El coste del segundo ataque: " + data[0].attacks[1].cost[0] + ", " + data[0].attacks[1].cost[0]) */
     document.getElementById("modal-content").innerHTML = ""
     document.getElementById("modal-content").innerHTML += `<div id="modal-data-content">
                                                                 <section id="modal-inner-image">
@@ -157,10 +341,15 @@ function printCardData(data) {
                                                                         <p>HP ${data[0].hp} ${changeTypes(data[0].types)}</p>
                                                                     </article>
                                                                     <article id="card-attacks-info">
+                                                                        <h6 id="abilities-title">${hasAbilityType(data[0].abilities)}</h6>
+                                                                        <section>
+                                                                            <p>${hasAbilityName(data[0].abilities)}</p>
+                                                                            <p>${hasAbilityText(data[0].abilities)}</p>
+                                                                        </section>
                                                                         <h6>ATTACKS</h6>
                                                                         <section>
-                                                                            <p>${data[0].attacks[0].cost} ${data[0].attacks[0].name} ${data[0].attacks[0].damage}</p>
-                                                                            <p>${data[0].attacks[0].text}</p>
+                                                                            <p>${attacksCost(data[0].attacks[0])} ${attackName(data[0].attacks[0])} ${attackDamage(data[0].attacks[0])}</p>
+                                                                            <p>${attackText(data[0].attacks[0])}</p>
                                                                         </section>
                                                                         <section>
                                                                             <p>${attacksCost(data[0].attacks[1])} ${attackName(data[0].attacks[1])} ${attackDamage(data[0].attacks[1])}</p>
