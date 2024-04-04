@@ -46,3 +46,4 @@ Para ello, estoy creando la plantilla con los elementos que se crearán en el Mo
 1. Si hay muchos resultados necesito un botón o algo que me cargue las diferentes páginas donde estén (porque cada págine solo permite un máximo de 250 cartas)
 2. Hacer un poco más grandes los nombres de los ataques y la habilidad
 3. Exportar las rutas de postman y crear un .json con ellas, para que otros puedan utilizarlas
+4. Seguir refactorizando el código
