@@ -8,42 +8,20 @@
     font-family: "Molengo";
 }
 
+/* Elementos */
 body {
     background-color: hsl(0, 0%, 19%);
     position: absolute;
 }
 
-#estoy-en-ello {
-    font-size: 40px;
-    margin-top: 100px;
-    text-align: center;
-    color: hsl(0, 0%, 96%);
+a {
+    text-decoration: none;
 }
 
-#menu-entry {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-    line-height: 1.25;
-    padding-left: 0;
-}
-
-#menu-entry a {
-    border-radius: 2px;
-    color: hsl(0, 0%, 96%);
-    display: block;
-    padding: 0.5em 0.75em;
-}
-
-#card-filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    margin-top: 30px;
+p { /* Información en las cartas */
+    font-size: 1rem;
+    color: white;
+    margin: 5px;
 }
 
 select {
@@ -65,54 +43,13 @@ select {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-}
 
-#container {
-    flex-grow: 1;
-    margin: 0 auto;
-    position: relative;
-    width: auto;
-    padding-left: 0;
-}
-
-#field-search-box {
+/* Clases */
+.attack-cost-name-damage {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-#search-input {
-    border: 0;
-    width: 70vw;
-    padding: 13px;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: all 0.25s ease;
-}
-
-#search-button {
-    padding: 8px;
-    padding-right: 50px;
-    width: 10vw;
-    margin-left: 10px;
-    border-radius: 0.25rem 0 1rem 0.3rem;
-    cursor: pointer;
-    font-size: 1em;
-    outline: 0;
-    border: 0;
-    background: hsl(0, 0%, 96%);
-    transition: all 0.25s ease;
-}
-
-
-
-#search-results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .card-container {
@@ -125,14 +62,146 @@ a {
     margin: 20px 15px;
 }
 
-/*Botón del Modal*/
-#card-click {
+.legalities-button {
+    font-size: 10px;
+    background-color: green;
+    padding: 5px;
+    margin: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pokemon-type-image {
+    height: 15px;
+}
+
+
+.rules-attack-text {
+    text-align: justify;
+}
+
+.regulation-button {
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+/* IDs */
+#abilities-title, h6 {
+    font-size: 1em
+}
+
+#card-attacks-info>section {
+    margin-top: 20px;
+}
+
+#card-basic-info {
+    margin-top: 15px;
+}
+#card-basic-info, #card-basic-info>article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card-click { /*Botón del Modal*/
     cursor: pointer;
     padding: 0;
     border: 1;
     width: 40%;
     margin-bottom: 20px;
     border-radius: 5px;
+}
+
+#card-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+#card-regulations-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#card-regulations-standard, #card-regulations-expanded, #card-regulations-unlimited {
+    display: flex;
+}
+
+#card-variety-info-1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+#card-variety-info-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#close-modal {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+#close-modal:hover, #close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+    padding-left: 0;
+}
+
+#estoy-en-ello {
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    color: hsl(0, 0%, 96%);
+}
+
+#field-search-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#hp-type-row {
+    font-size: 22px;
+}
+
+#menu-entry {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    padding-left: 0;
+}
+#menu-entry a {
+    border-radius: 2px;
+    color: hsl(0, 0%, 96%);
+    display: block;
+    padding: 0.5em 0.75em;
 }
 
 #modal-box {
@@ -167,19 +236,11 @@ a {
     color: white;
 }
 
-#close-modal {
-    color: black;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
+#modal-data-content>p {
+    margin: 20px 10px;
+    text-align: justify;
 }
 
-#close-modal:hover,
-#close-modal:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 #modal-inner-image {
     display: flex;
     flex-direction: column;
@@ -189,33 +250,38 @@ a {
     height: 400px;
 }
 
-.pokemon-type-image {
-    height: 20px;
+#pokemon-regulationMark-image {
+    width: 20px;
 }
 
-.attack-cost-name-damage {
+#search-button {
+    padding: 8px;
+    padding-right: 50px;
+    width: 10vw;
+    margin-left: 10px;
+    border-radius: 0.25rem 0 1rem 0.3rem;
+    cursor: pointer;
+    font-size: 1em;
+    outline: 0;
+    border: 0;
+    background: hsl(0, 0%, 96%);
+    transition: all 0.25s ease;
+}
+
+#search-input {
+    border: 0;
+    width: 70vw;
+    padding: 13px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.25s ease;
+}
+
+#search-results {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5px;
-}
-
-#card-basic-info {
-    margin-top: 15px;
-}
-#card-basic-info, #card-basic-info>article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#modal-data-content>p {
-    margin: 20px 10px;
-    text-align: justify;
-}
-
-#abilities-title, h6 {
-    font-size: 1em
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
 #weak-res-reat-raw {
@@ -228,67 +294,86 @@ a {
     width: 50%;
 }
 
-#card-attacks-info>section {
-    margin-top: 20px;
+
+@media only screen and (min-width: 700px) {
+    * {
+        font-size: 1.1em;
+    }
+
+    /* Elementos */
+    p {
+        font-size: 1.6rem;
+    }
+    
+
+    /* Clases */
+    .card-container {
+        margin-right: 1em;
+    }
+
+    .card-image {
+        width: 12em;
+    }
+
+    .legalities-button {
+        font-size: 0.8em;
+    }
+
+    .pokemon-type-image {
+        height: 0.8em;
+    }
+
+    .regulation-button {
+        font-size: 0.8em;
+    }
+
+
+    /* IDs */
+    #abilities-title, h6 {
+        font-size: 0.8em;
+    }
+    
+    #card-basic-info {
+        font-size: 1.3em;
+    }
+    
+    #card-filters {
+        margin-right: 2.5em;
+    }
+
+    #card-variety-info-1 {
+        justify-content: space-between;
+    }
+
+    #field-search-box {
+        padding-right: 2em;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #hp-type-row {
+        font-size: 1em;
+    }
+    
+    #menu-entry {
+        width: 100vw;
+    }
+
+    #modal-inner-image>img {
+        height: 550px;
+    }
+
+    #pokemon-regulationMark-image {
+        width: 1em;
+    }   
 }
 
-#card-variety-info-1 {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
+@media only screen and (min-width: 1200px) {
+    .card-image {
+        width: 9em;
+    }
+    
+    .open-modal-button {
+        font-size: 0.8em;
+    }
 }
-#card-variety-info-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#hp-type-row {
-    font-size: 22px;
-}
-
-#card-regulations-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#card-regulations-standard, #card-regulations-expanded, #card-regulations-unlimited {
-    display: flex;
-}
-
-#pokemon-regulationMark-image {
-    width: 20px;
-}
-
-.rules-attack-text {
-    text-align: justify;
-}
-
-.regulation-button {
-    font-size: 10px;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    margin: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.legalities-button {
-    font-size: 10px;
-    background-color: green;
-    padding: 5px;
-    margin: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-/* Toda la info de la carta */
-p {
-    font-size: 1rem;
-    color: white;
-    margin: 5px;
-}
-
