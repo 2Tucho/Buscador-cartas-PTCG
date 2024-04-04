@@ -44,6 +44,5 @@ Para ello, estoy creando la plantilla con los elementos que se crearán en el Mo
 
 **QUEDA MIRAR**
 1. Si hay muchos resultados necesito un botón o algo que me cargue las diferentes páginas donde estén (porque cada págine solo permite un máximo de 250 cartas)
-2. Hacerme unos cuantos if con los distintos tipos de cartas: pokemon con un solo ataque, pokemon con 3 (Sceptile EX), pokemon con habilidad, entrenadores o energías
-3. Hacer funciones como la de los ataques para las resistencias, debilidades y otras cosas que los resultados de alguna carta no tengan y me den como undefined
-4. Modificar la tipografía de la Habilidad para que sea igual que la de los ataques y demás
+2. Hacer un poco más grandes los nombres de los ataques y la habilidad
+3. Exportar las rutas de postman y crear un .json con ellas, para que otros puedan utilizarlas
