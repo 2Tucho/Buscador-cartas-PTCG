@@ -12,15 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
 </head>
 
+<header>
+    <nav id="menu">
+        <ul id="menu-entry">
+            <li><a href="#">Buscador</a></li>
+            <li><a href="/html/coleccion.html">Colección</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
     <div id="container">
-        <aside id="menu">
-            <ul id="menu-entry">
-                <li><a href="#">Buscador</a></li>
-                <li><a href="/html/coleccion.html">Colección</a></li>
-            </ul>
-        </aside>
-
         <div id="card-filters">
             <select id="format">
                 <option disabled selected>-- Formato --</option>
@@ -43,10 +45,9 @@
     </div>
     
     <div id="modal-box" class="modal">
-        <div class="modal-content">
+        <div id="modal-content">
             <span id="close-modal">&times;</span>
-            <h2>Ventana modal</h2>
-            <p>Esto es el texto de la ventana</p>
+            
         </div>
     </div>
 

@@ -10,14 +10,14 @@
 
 body {
     background-color: hsl(0, 0%, 19%);
-
+    position: absolute;
 }
 
-p {
-    color: hsl(0, 0%, 96%);
-    font-size: 2rem;
-    text-align: center;
+#estoy-en-ello {
+    font-size: 40px;
     margin-top: 100px;
+    text-align: center;
+    color: hsl(0, 0%, 96%);
 }
 
 #menu-entry {
@@ -112,6 +112,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .card-container {
@@ -122,7 +123,6 @@ a {
 
 .card-image {
     margin: 20px 15px;
-    height: 300px;
 }
 
 /*Botón del Modal*/
@@ -135,35 +135,36 @@ a {
     border-radius: 5px;
 }
 
-.modal {
+#modal-box {
     display: none;
     /* Por defecto, estará oculto */
-    position: fixed;
+    position: absolute;
     /* Posición fija */
     z-index: 1;
     /* Se situará por encima de otros elementos de la página*/
-    padding-top: 200px;
+    padding-top: 100px;
     /* El contenido estará situado a 200px de la parte superior */
+    margin-bottom: 100px;
     left: 0;
     top: 0;
+    
     width: 100%;
     /* Ancho completo */
     height: 100%;
-    /* Algura completa */
-    overflow: auto;
+    /* Altura completa */
+    /* overflow: auto; */
     /* Se activará el scroll si es necesario */
     background-color: rgba(0, 0, 0, 0.5);
     /* Color negro con opacidad del 50% */
 }
 
-.modal-content {
+#modal-content {
     position: relative;
     /* Relativo con respecto al contenedor -modal- */
-    background-color: white;
     margin: auto;
     /* Centrada */
-    padding: 20px;
-    width: 60%;
+    width: 80%;
+    color: white;
 }
 
 #close-modal {
@@ -179,3 +180,115 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+#modal-inner-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#modal-inner-image>img {
+    height: 400px;
+}
+
+.pokemon-type-image {
+    height: 20px;
+}
+
+.attack-cost-name-damage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#card-basic-info {
+    margin-top: 15px;
+}
+#card-basic-info, #card-basic-info>article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-data-content>p {
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+#abilities-title, h6 {
+    font-size: 1em
+}
+
+#weak-res-reat-raw {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+#weak-res-reat-raw>section {
+    width: 50%;
+}
+
+#card-attacks-info>section {
+    margin-top: 20px;
+}
+
+#card-variety-info-1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+#card-variety-info-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#hp-type-row {
+    font-size: 22px;
+}
+
+#card-regulations-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#card-regulations-standard, #card-regulations-expanded, #card-regulations-unlimited {
+    display: flex;
+}
+
+#pokemon-regulationMark-image {
+    width: 20px;
+}
+
+.rules-attack-text {
+    text-align: justify;
+}
+
+.regulation-button {
+    font-size: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.legalities-button {
+    font-size: 10px;
+    background-color: green;
+    padding: 5px;
+    margin: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Toda la info de la carta */
+p {
+    font-size: 1rem;
+    color: white;
+    margin: 5px;
+}
+
