@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de cartas PTCG</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="../assets/icono-pokeball.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <aside id="menu">
-            <ul id="menu-entry" class="menu-list">
-                <li><a href="#">Buscador</a></li>
-                <li><a href="/html/coleccion.html">Colección</a></li>
-            </ul>
-        </aside>
 
-        <div class="field-search-box">
-            <div class="control">
-                <input type="text" id="search-input" class="input" placeholder="Introduce nombre de la carta" autofocus="autofocus">
-            </div>
-            <button id="search-button">Buscar</button>
+<header>
+    <nav id="menu">
+        <ul id="menu-entry">
+            <li><a href="#">Buscador</a></li>
+            <li><a href="/html/coleccion.html">Colección</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div id="container">
+        <div id="card-filters">
+            <select id="format">
+                <option disabled selected>-- Formato --</option>
+                <option value="Estándar">Estándar</option>
+                <option value="Expandido">Expandido</option>
+                <option value="Unlimited">Unlimited</option>
+            </select>
+            <select id="supertypes">
+                <option disabled selected>-- Supertipos --</option>
+                <option value="Pokémon">Pokémon</option>
+                <option value="Entrenadores">Entrenadores</option>
+                <option value="Energías">Energías</option>
+            </select>
+        </div>
+
+        <form id="field-search-box">
+            <input type="search" id="search-input" class="input" placeholder="Introduce nombre de la carta" autofocus="autofocus">
+            <input type="submit" id="search-button" value="Buscar"></input>
+        </form>
+    </div>
+    
+    <div id="modal-box" class="modal">
+        <div id="modal-content">
+            <span id="close-modal">&times;</span>
+            
         </div>
     </div>
-    <script src="./scripts/main.js"></script>
+
+    <section id="search-results">
+        
+    </section>
+    
+    <script src="../scripts/main.js"></script>
 </body>
+
 </html>
