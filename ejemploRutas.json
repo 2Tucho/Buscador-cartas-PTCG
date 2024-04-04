@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "6544b7d6-9ef4-4b3c-987f-93330c65922c",
+		"name": "PTCG.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33668841"
+	},
+	"item": [
+		{
+			"name": "Nombre de Pokémon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:\"metagross vmax\"",
+					"host": [
+						"{{cardSearch}}name"
+					],
+					"port": "\"metagross vmax\""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtipo de Pokémon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}subtypes:vmax",
+					"host": [
+						"{{cardSearch}}subtypes"
+					],
+					"port": "vmax"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supertipo de carta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}supertype:Trainer",
+					"host": [
+						"{{cardSearch}}supertype"
+					],
+					"port": "Trainer"
+				},
+				"description": "Si es Pokémon, Trainer o Energy"
+			},
+			"response": []
+		},
+		{
+			"name": "Todos los sets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}sets",
+					"host": [
+						"{{baseURL}}sets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre + subtipo (uno / otro)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:charizard (subtypes:mega OR subtypes:vmax)",
+					"host": [
+						"{{cardSearch}}name:charizard (subtypes:mega OR subtypes"
+					],
+					"port": "vmax)"
+				},
+				"description": "name:charizard (subtypes:mega OR subtypes:vmax)"
+			},
+			"response": []
+		},
+		{
+			"name": "Cartas de un set por id.set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}set.id:\"swsh10\"",
+					"host": [
+						"{{cardSearch}}set",
+						"id"
+					],
+					"port": "\"swsh10\""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre + legalidad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:\"charizard\" legalities.standard:legal",
+					"host": [
+						"{{cardSearch}}name:\"charizard\" legalities",
+						"standard"
+					],
+					"port": "legal"
+				},
+				"description": "{{cardSearch}}name:\"charizard\" legalities.standard:legal"
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre + legalidad + orden de salida de set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:\"metagross v\" legalities.standard:legal&orderBy=-set.releaseDate",
+					"host": [
+						"{{cardSearch}}name:\"metagross v\" legalities",
+						"standard"
+					],
+					"port": "legal&orderBy=-set.releaseDate"
+				},
+				"description": "{{cardSearch}}name:\"pidgeot\" legalities.standard:legal&orderBy=-set.releaseDate"
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre + supertipo + orden por salida del set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:\"pidgeot\" supertype:pokemon&orderBy=-set.releaseDate",
+					"host": [
+						"{{cardSearch}}name:\"pidgeot\" supertype"
+					],
+					"port": "pokemon&orderBy=-set.releaseDate"
+				},
+				"description": "{{cardSearch}}name:\"pidgeot\" supertype:pokemon&orderBy=-set.releaseDate"
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre + FILTROS APLICADOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{cardSearch}}name:\"pidgeot\"&supertype:pokemon&legalities.unlimited:legal&orderBy=-set.releaseDate",
+					"host": [
+						"{{cardSearch}}name:\"pidgeot\"&supertype:pokemon&legalities",
+						"unlimited"
+					],
+					"port": "legal&orderBy=-set.releaseDate"
+				},
+				"description": "{{cardSearch}}name:\"pidgeot\" supertype:pokemon legalities.standard:legal&orderBy=-set.releaseDate"
+			},
+			"response": []
+		}
+	]
+}
