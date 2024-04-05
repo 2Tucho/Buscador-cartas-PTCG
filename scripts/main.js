@@ -1,3 +1,6 @@
+//Creo variable vacía con mis resultados del fetch
+let searchResults = {};
+
 //Envía lo recibido en los 3 input para hacer la petición fetch a la API
 document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
@@ -35,9 +38,6 @@ document.querySelector("form").addEventListener("submit", function (event) {
             printSearchResults(searchResults);
         })
 });
-
-//Creo variable vacía con mis resultados del fetch
-let searchResults = {};
 
 //Muestra las cartas que coinciden con el nombres y los filtros de búsqueda
 function printSearchResults(search) {
@@ -102,7 +102,7 @@ function printCardData(data) {
             return ""
         } else {
             for(let i = 0; i < data[0].attacks[num].cost.length; i++) {
-                switch (data[0].attacks[num].cost[i]) { //Hay un switch poor cada posible energía de coste de un ataque. La cambia por el simbolitoi que represente
+                switch (data[0].attacks[num].cost[i]) { //Hay un switch por cada posible energía de coste de un ataque. La cambia por el simbolito que represente
                     case "Colorless":
                         cost += colorlessEnergy;
                         break;

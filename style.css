@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-p { /* Información en las cartas */
+p { /* Información descrita en las Modal Box */
     font-size: 1rem;
     color: white;
     margin: 5px;
@@ -150,7 +150,7 @@ select {
     margin-bottom: 30px;
 }
 
-#close-modal {
+#close-modal { /* Botón de cierre del modal */
     color: white;
     position: relative;
     right: -90%;
