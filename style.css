@@ -75,7 +75,6 @@ select {
     height: 15px;
 }
 
-
 .rules-attack-text {
     text-align: justify;
 }
@@ -152,15 +151,18 @@ select {
 }
 
 #close-modal {
-    color: black;
-    float: right;
+    color: white;
+    position: relative;
+    right: -90%;
     font-size: 30px;
     font-weight: bold;
+
 }
 #close-modal:hover, #close-modal:focus {
-    color: #000;
+    color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
+    font-size: xx-large;
 }
 
 #container {
@@ -345,6 +347,10 @@ select {
         justify-content: space-between;
     }
 
+    #close-modal {
+        right: -85%;
+    }
+
     #field-search-box {
         padding-right: 2em;
         flex-direction: row;
@@ -375,5 +381,9 @@ select {
     
     .open-modal-button {
         font-size: 0.8em;
+    }
+
+    #close-modal {
+        right: -80%;
     }
 }
